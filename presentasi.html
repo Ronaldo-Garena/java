@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire</title>
+    
+    <link rel="icon" href="/tugas/image/favicon.png" type="png">
+</head>
+<body>
+
+    <header>
+        <h1>Free Fire Information Center</h1>
+        <p>Ayo cari tahu mengenai Free Fire!</p>
+        <!-- JAVA DARK MODE BUTTONNYA-->
+        <button onclick="toggleDarkMode()">Ubah Dark Mode</button>
+        <!--LAGU DISETEL DARI SINI BUTTON COMMANDNYA-->
+        <button onclick="toggleMusic()" id="musicButton">Dengar Lagu Kebangsaan?</button>
+    </header>
+    <h2>Mabar? Tetap Ingat Waktu Ya!</h2>
+    <button type="button"onclick="document.getElementById('demo').innerHTML = Date()">
+    Tekan Aku Supaya Tidak Lupa Waktu.</button>
+    <p id="demo"></p>
+
+<p id="demo"></p>
+    <nav>
+        <a href="#about">About Free Fire</a>
+        <a href="#js-home">Developer Free Fire</a>
+        <a href="#js-intro">Interaksi Dengan Pemain</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Free Fire</h2>
+        <img src="/tugas/image/about.jpg" alt="FREE FIRE" width="650">
+        <!-- JAVA BISA GANTI HTML BUTTON KONTEN -->
+        <p id="demo1">Mau tau informasi tentang Free Fire? Klik tombol di bawah</p>
+        <button type="button" onclick="changeContent()">Tekan Aku!</button>
+    </section>
+
+    <section id="js-home">
+        <!-- JAVA BISA GANTI STYLE HTML KONTEN -->
+        <h2>Developer Free Fire</h2>
+        <img src="/tugas/image/garena.jpg" alt="Assassin's Creed" width="650">
+        <p id="demo2">Game Free Fire dikembangkan oleh 111 Dots Studio, sebuah studio pengembang game dari Vietnam. Meskipun dikembangkan oleh 111 Dots Studio, 
+        game ini diterbitkan dan dikelola secara global oleh Garena, sebuah perusahaan yang berbasis di Singapura.</p>
+        <button type="button" onclick="changeFontSize()">Sentuh Aku!</button>
+        
+       
+        <!-- JAVA BISA SEMBUNYIIN KONTEN HTML -->
+        <h2>Karakter Free Fire</h2>
+        <img src="/tugas/image/karakter.jpg" alt="Karakter" width="650">
+        <p id="demo">Free Fire menawarkan berbagai karakter dengan kemampuan unik yang memengaruhi strategi permainan. Misalnya, Alok dapat menyembuhkan dan meningkatkan
+        kecepatan gerakan tim, sementara Wolfrahh mengurangi damage dari headshots. Karakter seperti Jota memulihkan HP setelah mengalahkan musuh, dan Chrono menciptakan
+        perisai untuk melindungi diri dari serangan. Moco dapat menandai lokasi musuh yang diserang, sedangkan Skyler menghancurkan Gloo Wall dan memberikan pemulihan HP. 
+        Karakter baru seperti Orion memiliki kemampuan untuk menyerap HP musuh, sementara D-Bee meningkatkan kecepatan saat bersenjata. Dengan memahami kemampuan masing-masing 
+        karakter, pemain dapat memilih strategi yang sesuai dan memaksimalkan potensi tim di medan perang.</p>
+        <button type="button" onclick="document.getElementById('demo').style.display='none'">Tekan Saya</button>
+
+        <!-- JAVA JAVA HTML MUNCULIN -->
+        <h2>KATA KATANYA HILANG? KLIK DIBAWAH YA!!!</h2>
+        <p id="demo" style="display:none"></p>
+        <button type="button" onclick="document.getElementById('demo').style.display='block'">Sentuh Aku!</button>
+        
+     </section>
+
+     <section id="js-intro">
+        <h2>Halo Para Pemain Booyah</h2>
+        <img src="/tugas/image/booyah.jpg" alt="Assassin's Creed" width="650">
+        <p>Kita sangat sengang jika kalian para pemain suka bermain Free Fire, semoga kalian akan terus bermain sampai Free Fire update terus. 
+            Sehingga kalian tidak akan bosan untuk bermainnya</p>
+
+        <!--TAMBAHAN AJA-->
+        <!-- JAVA UNTUK GREETING -->
+        <h2>Kita ingin menyapa kalian</h2>
+        <button onclick="greetUser()">SAPA AKU</button>
+        <p id="greeting-message"></p>
+        
+        <!-- Command untuk pengecekan -->
+        <h2>Periksa Umurmu, apakah sudah pantas bermain Free Fire!</h2>
+        <button onclick="checkAge()">Ayo Periksa Umurmu!</button>
+        <input type="number" id="age-input" placeholder="Masukkan Umurmu">
+        <p id="age-result"></p>
+
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <small>Copyright &copy; 2024 - Kelompok JavaScript, All Right Reserved</small>
+        </div>
+    </footer>
+
+    <audio id="backgroundMusic" src="/tugas/image/free.mp3" loop></audio>
+    <script>
+        // JAVA INTRODUCTION YANG MAKE SYNTAX FUNCTION CUMAN YANG CHANGE CONTENT HTML SAMA CHANGE STYLE HTML, KALAU YANG SEMNBUNYIIN DAN MUNCULIN GA PAKE FUNCTION JADI DIA NYATU SAMA ATRIBUT HTML
+        // JAVA BISA UBAH KONTEN DALAM
+        function changeContent() {
+        document.getElementById("demo1").innerHTML ="Free Fire adalah permainan battle royale gratis yang dikembangkan dan diterbitkan oleh Garena untuk Android dan iOS . [ 4 ] Permainan ini dirilis pada 8 Desember 2017. Permainan ini menjadi permainan seluler yang paling banyak diunduh secara global pada tahun 2019 dan telah diunduh lebih dari 1 miliar kali di Google Play Store. Dalam Free Fire, hingga 50 pemain terjun dari pesawat ke sebuah pulau untuk bertarung satu sama lain. Pemain dapat memilih lokasi pendaratan mereka dan harus segera mencari senjata serta item untuk bertahan hidup. Konsep dasar permainan ini adalah untuk menjadi pemain terakhir yang bertahan dengan cara mengalahkan lawan-lawan yang ada";
+        }
+        // JAVA BISA UBAH STYLE HTML
+        function changeFontSize() {
+            document.getElementById("demo2").style.fontSize = "30px";
+        }
+
+        // Syntax kebawah dari sini full tambahan diluar dari materi JS HOME DAN INTRODUCTION
+        // Java DARK MODE kek gini
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+        // Buat Greetings!
+        function greetUser() {
+            let greeting = "HAI PARA PEMAIN GAME BURIK!";
+            document.getElementById("greeting-message").innerText = greeting;
+        }
+        // Buat Syntax Liat Umur
+        function checkAge() {
+            let age = document.getElementById("age-input").value;
+            let message;
+            if (age >= 15) {
+             message = "Kamu Sudah Pantas Mendapat Booyah! Cepat Login!";
+            } else {
+            message = "Lebih baik kamu bermain kelereng :(";
+            }
+         document.getElementById("age-result").innerText = message;
+        }
+        // Play/Stop Music Toggle Function
+        function toggleMusic() {
+            const audio = document.getElementById("backgroundMusic");
+            const musicButton = document.getElementById("musicButton");
+            if (audio.paused) {
+                audio.play();
+                musicButton.textContent = "HENTIKAN";
+            } else {
+                audio.pause();
+                audio.currentTime = 0;  // Reset to the beginning
+                musicButton.textContent = "MULAI LAGI DONG";
+            }
+        }
+        </script>
+ 
+   
+</body>
+</html>
